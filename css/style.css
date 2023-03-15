@@ -1,0 +1,21 @@
+.global {
+  background: #000;
+}
+
+.header {
+  width: 100%;
+  color: #fff;
+  display: flex;
+}
+.header__logo {
+  width: 30%;
+}
+.header__menu {
+  width: 70%;
+  margin: auto;
+}
+.header__menu ul {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
