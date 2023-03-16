@@ -28,14 +28,22 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
   
-  * {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
-  }
+}
+
+// -------------------- body -------------------- //
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	&.lock {
+		overflow: hidden;
+	}
+}
 
 // -------------------- Global -------------------- //
 
@@ -150,8 +158,9 @@ html {
     &__text a:hover {
         background: none;
     }
-
-    
 }
 
+.hide{
+    display: none;
+}
 
