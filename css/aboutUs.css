@@ -74,3 +74,53 @@ html {
     display: block;
   }
 }
+.intro {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.intro__media {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.3;
+}
+.intro__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  width: 50%;
+}
+.intro__content p {
+  color: #fff;
+  text-align: center;
+  font-size: 17px;
+}
+.intro__content h2 {
+  color: #fff;
+  font-size: 50px;
+  margin: 0px 0px 50px 0px;
+}
+.intro__content h2::after {
+  content: "";
+  display: block;
+  width: 220px;
+  height: 3px;
+  background-color: #E79E00;
+  position: absolute;
+  z-index: 1;
+}
+.intro__media-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+}
