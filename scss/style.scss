@@ -23,11 +23,13 @@
 // -------------------- Fonts -------------------- //
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
 
 // -------------------- Html -------------------- //
 
 html {
     scroll-behavior: smooth;
+    background: #121212;
   }
   
   * {
@@ -40,7 +42,7 @@ html {
 // -------------------- Global -------------------- //
 
 .global {
-    max-width: 0;
+    background: #121212;
 }
 
 // -------------------- Header -------------------- //    
@@ -107,6 +109,7 @@ html {
     height: 100%;
     margin: 0 auto;
     padding: 0 50px;
+    color: #fff;
 }
 
 // -------------------- Baner -------------------- //
@@ -114,8 +117,11 @@ html {
 .baner {
 
     height: 80vh;
+    background-image: url(../img/baner/1.jpg);
+    background-size: cover;
 
     &__text {
+        
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -144,12 +150,89 @@ html {
         letter-spacing: 0.01em;
         border: 2px solid #E79E00;
         color: #000000;
-        transition: 0.6s;
+        transition: 0.2s;
     }
 
     &__text a:hover {
         background: none;
+        border:2px solid #121212;
     }
 
     
 }
+
+// -------------------- Loading -------------------- //
+
+.loading {
+    border-color: #121212;
+    margin: 50px 0px 0px 0px;
+
+    &__text {
+        margin: 20px 0px 50px 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__blocks {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0px 0px 50px 0px;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        animation: slideLoadBlock 1s ease forwards;
+        animation-delay: .4s;
+    }
+
+    &__block h3{
+        margin: 30px 0px 10px 0px;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    &__block p{
+        margin: 0px 0px 30px 0px;
+        font-size: 13px;
+    }
+
+    &__block a {
+        text-decoration: none;
+        background: #E79E00;
+        border-radius: 25px;
+        padding: 0px 35px;
+        font-family: "Montserrat";
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 37px;
+        letter-spacing: 0.01em;
+        border: 2px solid #E79E00;
+        color: #000000;
+        transition: 0.2s;
+    }
+
+    &__block a:hover {
+        background: none;
+        border:2px solid #121212;
+    }
+}
+
+@keyframes slideLoadBlock {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+
