@@ -1,8 +1,7 @@
+// Бургер меню
+
 const menu = document.querySelector('.menu__body')
 const menuBtn = document.querySelector('.menu__icon')
-
-console.log(menu);
-console.log(menuBtn);
 
 const body = document.body;
 
@@ -30,11 +29,11 @@ if (menu && menuBtn) {
 	})
 }
 
-/*===========================================*/
+// ----
+
+// Анимация скрола при нажатии на ссылку
 
 const anchors = document.querySelectorAll('a[href*="#"]');
-
-console.log(anchors);
 
 anchors.forEach(anchor => {
 	anchor.addEventListener('click', event => {
@@ -48,3 +47,28 @@ anchors.forEach(anchor => {
 		})
 	})
 })
+
+// ----
+
+// Смена картинок на баннере
+
+const banner = document.querySelector('.baner'),
+	  timerId = setInterval(changeBG, 1000);
+let timerIterator = 0;
+
+function changeBG(){
+	console.log(banner?.style.backgroundImage);
+	if (banner?.style.backgroundImage === undefined){
+		clearInterval(timerId)
+		return
+	} else if (timerIterator >= 3){
+		timerIterator = 1
+	} else{
+		timerIterator++
+	}
+	banner.style.backgroundImage = `url(img/baner/${timerIterator}.png)`
+	
+}
+
+
+// ----
