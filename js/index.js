@@ -1,15 +1,50 @@
-"use_strict"
+const menu = document.querySelector('.menu__body')
+const menuBtn = document.querySelector('.menu__icon')
 
-let burgerTrigger = document.querySelector('[data-burger-open]'), 
-    burgerMenu = document.querySelector('.burger_menu'),
-    burgerClose = document.querySelector([data-burger-close]);
-    
-burgerTrigger.addEventListener('click', () => {
-    burgerMenu.classList.toggle('show');
-    document.body.style.overflow = 'hidden';
-});
+console.log(menu);
+console.log(menuBtn);
 
-burgerClose.addEventListener('click', () => {
-    burgerMenu.classList.toggle('show');
-    document.body.style.overflow = '';
-});
+const body = document.body;
+
+if (menu && menuBtn) {
+	menuBtn.addEventListener('click', e => {
+		menu.classList.toggle('active')
+		menuBtn.classList.toggle('active')
+		body.classList.toggle('lock')
+	})
+
+	menu.addEventListener('click', e => {
+		if (e.target.classList.contains('menu__body')) {
+			menu.classList.remove('active')
+			menuBtn.classList.remove('active')
+			body.classList.remove('lock')
+		}
+	})
+
+	menu.querySelectorAll('.menu__link').forEach(link => {
+		link.addEventListener('click', () => {
+			menu.classList.remove('active')
+			menuBtn.classList.remove('active')
+			body.classList.remove('lock')
+		})
+	})
+}
+
+/*===========================================*/
+
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+console.log(anchors);
+
+anchors.forEach(anchor => {
+	anchor.addEventListener('click', event => {
+		event.preventDefault();
+
+		const blockID = anchor.getAttribute('href').substring(1);
+
+		document.getElementById(blockID).scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		})
+	})
+})
