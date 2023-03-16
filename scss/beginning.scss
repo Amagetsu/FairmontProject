@@ -43,7 +43,6 @@ html {
 
 .global {
     background: #121212;
-    height: 100vh;
 }
 
 // -------------------- Header -------------------- //    
@@ -67,16 +66,6 @@ html {
         margin: auto;
         display: flex;
         justify-content: center;
-    }
-
-    &__menu a{
-        text-decoration: none;
-        color: #fff;
-        transition: .3s;
-    }
-
-    &__menu a:hover {
-        color: #E79E00;
     }
 
     &__menu ul{
@@ -109,4 +98,20 @@ html {
     .header__menu img{
         display: block;
     }
+}
+
+// -------------------- Video -------------------- //
+
+.video{
+    position: relative;
+    padding-bottom: 56.25%;
+    background: #000;
+}
+
+#myVideo {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .3;
 }
