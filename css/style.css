@@ -9,7 +9,13 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: "Montserrat", sans-serif;
+}
+body.lock {
+  overflow: hidden;
 }
 
 .global {
@@ -125,6 +131,10 @@ html {
   color: #E79E00;
 }
 
+.hide {
+  display: none;
+}
+
 .loading {
   border-color: #121212;
   margin: 50px 0px 0px 0px;
@@ -222,8 +232,4 @@ html {
   background: #E79E00;
   border: 2px solid #121212;
   color: #121212;
-}
-
-.hide {
-  display: none;
 }
