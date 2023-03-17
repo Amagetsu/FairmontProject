@@ -53,7 +53,7 @@ anchors.forEach(anchor => {
 // Смена картинок на баннере
 
 const banner = document.querySelector('.baner'),
-	  timerId = setInterval(changeBG, 1000);
+	  timerId = setInterval(changeBG, 10000);
 let timerIterator = 0;
 
 function changeBG(){
@@ -70,5 +70,27 @@ function changeBG(){
 	
 }
 
+
+// ----
+
+// Модельное меню 
+
+const modalTrigger = document.querySelectorAll('[data-modal]'),
+	  modal = document.querySelector('.lol'),
+	  modalCloseBtn = document.querySelector('[data-close]');
+
+modalTrigger.addEventListener('click', () => {
+
+	modal.classList.add('show');
+	modal.classList.remove('hide');
+
+});
+
+modalTrigger.addEventListener('click', () => {
+
+	modal.classList.add('hide');
+	modal.classList.remove('show');
+
+});
 
 // ----
