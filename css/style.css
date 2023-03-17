@@ -11,6 +11,14 @@ html {
   padding: 0;
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -318,4 +326,105 @@ body.lock {
   background: #E79E00;
   border: 2px solid #121212;
   color: #121212;
+}
+
+.servers {
+  color: #fff;
+  text-decoration: none;
+}
+.servers__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.servers__text h2 {
+  margin: 0px 0px 40px 0px;
+}
+.servers__text img {
+  margin: 0px 0px 60px 0px;
+}
+.servers__text button {
+  text-decoration: none;
+  background: #E79E00;
+  border-radius: 25px;
+  padding: 0px 35px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 37px;
+  letter-spacing: 0.01em;
+  border: 2px solid #E79E00;
+  color: #000000;
+  transition: 0.2s;
+  margin: 0px 0px 50px 0px;
+}
+.servers__text button:hover {
+  background: #121212;
+  border: 2px solid #E79E00;
+  color: #E79E00;
+}
+
+.model {
+  width: 600px;
+  height: 600px;
+  background-color: hwb(41 0% 9%/0.95);
+  border: 10px solid #000;
+  border-radius: 25px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6969;
+  overflow: hidden;
+}
+.model img {
+  position: absolute;
+  top: 15px;
+  left: 535px;
+}
+.model__text h1 {
+  text-align: center;
+  margin: 15px 0px 0px 0px;
+}
+.model__servers-1 {
+  margin: 50px 0px 0px 0px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+.model__servers-1 a {
+  text-decoration: none;
+  background: #121212;
+  border-radius: 25px;
+  padding: 0px 35px;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 37px;
+  letter-spacing: 0.01em;
+  border: 2px solid #121212;
+  color: #E79E00;
+  transition: 0.2s;
+  margin: 0px 0px 50px 0px;
+}
+.model__servers-1 a:hover {
+  background: #E79E00;
+  border: 2px solid #121212;
+  color: #121212;
+}
+
+.lol {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.479);
+  z-index: 6968;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
