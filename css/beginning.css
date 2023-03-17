@@ -14,7 +14,6 @@ html {
 
 .global {
   background: #121212;
-  height: 100vh;
 }
 
 .header {
@@ -36,14 +35,6 @@ html {
   margin: auto;
   display: flex;
   justify-content: center;
-}
-.header__menu a {
-  text-decoration: none;
-  color: #fff;
-  transition: 0.3s;
-}
-.header__menu a:hover {
-  color: #E79E00;
 }
 .header__menu ul {
   width: -moz-max-content;
@@ -97,4 +88,43 @@ html {
 }
 .blocks__block-text {
   width: 50%;
+}
+
+.container {
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+  color: #fff;
+}
+.container h1 {
+  margin: 50px 0px 0px 0px;
+  text-align: center;
+}
+
+.blocks__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.blocks__block-img {
+  width: 50%;
+}
+.blocks__block-text {
+  width: 50%;
+}
+
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  background: #000;
+}
+
+#myVideo {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
 }

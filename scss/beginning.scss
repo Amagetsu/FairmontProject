@@ -43,7 +43,6 @@ html {
 
 .global {
     background: #121212;
-    height: 100vh;
 }
 
 // -------------------- Header -------------------- //    
@@ -67,16 +66,6 @@ html {
         margin: auto;
         display: flex;
         justify-content: center;
-    }
-
-    &__menu a{
-        text-decoration: none;
-        color: #fff;
-        transition: .3s;
-    }
-
-    &__menu a:hover {
-        color: #E79E00;
     }
 
     &__menu ul{
@@ -145,4 +134,54 @@ html {
 		&__block-text {
             width: 50%;
 		}
+}
+
+// -------------------- Container -------------------- //
+
+.container {
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+    color: #fff;
+    & h1 {
+        margin: 50px 0px 0px 0px;
+        text-align: center;
+    }
+}
+
+// -------------------- Blocks -------------------- //
+
+.blocks {
+
+		&__block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+		}
+
+		&__block-img {
+            width: 50%;
+		}
+
+		&__block-text {
+            width: 50%;
+		}
+}
+
+// -------------------- Video -------------------- //
+
+.video{
+    position: relative;
+    padding-bottom: 56.25%;
+    background: #000;
+}
+
+#myVideo {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .3;
 }
