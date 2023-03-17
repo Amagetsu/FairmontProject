@@ -267,3 +267,11 @@ html {
         transform: translate(-50%, -50%);
     }
 }
+
+// -------------------- @media -------------------- //
+
+@media screen and (max-width: 950px) {
+    .intro__content {
+        width: 80%;
+    }
+}

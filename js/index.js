@@ -1,28 +1,3 @@
-// Лоадер 
-
-const loader = document.querySelector('.loader');
-
-let loaderTime1;
-let loaderTime2;
-
-document.addEventListener('DOMContentLoaded', () => {
-
-	document.body.style.overflow = "hidden";
-	loaderTime1 = setInterval(loaderTimeClose, 5000);
-
-});
-
-function loaderTimeClose () {
-
-	loader.classList.add('opa')
-	// loaderTime1.clearInterval()
-	loader.remove()
-	document.body.style.overflow = "";
-
-}
-
-// ----
-
 // Бургер меню
 
 const menu = document.querySelector('.menu__body')
