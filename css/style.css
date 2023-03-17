@@ -231,10 +231,6 @@ body.lock {
   color: #E79E00;
 }
 
-.hide {
-  display: none;
-}
-
 .loading {
   border-color: #121212;
   margin: 50px 0px 0px 0px;
@@ -457,6 +453,28 @@ body.lock {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background: #000;
+  height: -moz-max-content;
+  height: max-content;
+}
+.footer__logo {
+  position: absolute;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  align-self: center;
+}
+.footer__text {
+  display: inline-block;
+  padding: 50px;
+  line-height: 50px;
+  color: #fff;
 }
 
 @keyframes slideBanerH1 {

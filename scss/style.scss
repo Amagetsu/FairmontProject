@@ -280,10 +280,6 @@ body {
     }
 }
 
-.hide{
-    display: none;
-}
-
 // -------------------- Loading -------------------- //
 
 .loading {
@@ -550,6 +546,29 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+// -------------------- footer -------------------- //
+
+.footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: #000;
+    height: max-content;
+    &__logo {
+        position: absolute;
+        left: 50px;
+        width: 100px;
+        height: 100px;
+        align-self: center;
+    }
+    &__text {
+        display: inline-block;
+        padding: 50px;
+        line-height: 50px;
+        color: #fff;
+    }
 }
 
 
