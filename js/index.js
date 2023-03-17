@@ -57,7 +57,6 @@ const banner = document.querySelector('.baner'),
 let timerIterator = 0;
 
 function changeBG(){
-	console.log(banner?.style.backgroundImage);
 	if (banner?.style.backgroundImage === undefined){
 		clearInterval(timerId)
 		return
@@ -96,3 +95,24 @@ modalCloseBtn.addEventListener('click', () => {
 });
 
 // ----
+
+// Функция копирования IP
+
+const copyBtn = document.querySelector('[data-copy-serverIP]'), 
+	  copyWarning = document.querySelector('[data-copy-warning]');
+
+let timerCopyWarning;
+
+copyBtn.addEventListener('click',() => {
+	navigator.clipboard.writeText('31.42.72.132:7777')
+	copyWarning.classList.add('show')
+	copyWarning.classList.remove('hide')
+	timerCopyWarning = setInterval(copyWarningRemove, 2000)
+	console.log('asdasdasd');
+})
+
+function copyWarningRemove ()  {
+	clearInterval(timerCopyWarning)
+	copyWarning.classList.remove('show')
+	copyWarning.classList.add('hide')
+}

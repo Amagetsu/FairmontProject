@@ -331,6 +331,8 @@ body.lock {
 .servers {
   color: #fff;
   text-decoration: none;
+  position: relative;
+  transition: 0.5;
 }
 .servers__text {
   display: flex;
@@ -366,6 +368,12 @@ body.lock {
   background: #121212;
   border: 2px solid #E79E00;
   color: #E79E00;
+}
+.servers__copy-warning {
+  position: absolute;
+  right: 50px;
+  bottom: 10vh;
+  z-index: 6969;
 }
 
 .model {
