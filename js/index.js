@@ -2,24 +2,39 @@
 
 const loader = document.querySelector('.loader');
 
-let loaderTime1;
-let loaderTime2;
+let loaderStage1;
+let loaderStage2;	
 
-document.addEventListener('DOMContentLoaded', () => {
+function setLoader () {
 
 	document.body.style.overflow = "hidden";
-	loaderTime1 = setInterval(loaderTimeClose, 5000);
+	loaderStage1 = setInterval(loaderStage1Close, 5000);
 
-});
+} setLoader()
 
-function loaderTimeClose () {
+function loaderStage1Close () {
 
+	console.log('adasd');
 	loader.classList.add('opa')
-	// loaderTime1.clearInterval()
-	loader.remove()
-	document.body.style.overflow = "";
-
+	loaderStage2 = setInterval(loaderStage2Close, 1000);
+	
 }
+
+function loaderStage2Close () {
+	console.log('222222222');
+	loader.classList.add('hide')	
+	document.body.style.overflow = "";
+	clearInterval(loaderStage1)
+	clearInterval(loaderStage2)
+}
+
+
+
+
+
+
+
+
 
 // ----
 
