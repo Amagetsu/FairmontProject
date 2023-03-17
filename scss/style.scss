@@ -44,6 +44,9 @@ html {
 .hide {
     display: none;
 }
+.opa {
+    opacity: 0;
+}
 
 // -------------------- body -------------------- //
 
@@ -571,6 +574,62 @@ body {
     }
 }
 
+// -------------------- @keyframes -------------------- //
+
+.pred-loader{
+    transition: 1s;
+}
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 6969;
+    overflow: hidden;
+    transition: .8s;
+}
+
+.intro {
+    position: relative;
+    height: 100vh;
+
+    &__media {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%; 
+        overflow: hidden;
+    }
+    &__media-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+// ---------------------------- Slider с боку
+
+::-webkit-scrollbar{
+    width:12px;
+ }
+ ::-webkit-scrollbar-thumb{
+    border-width:1px 1px 1px 2px;
+    border-color: #777;
+    background-color: #E79E00;
+    border-radius: 10px;
+ }
+ ::-webkit-scrollbar-thumb:hover{
+    border-width: 1px 1px 1px 2px;
+    border-color: #555;
+    background-color: #cc8b00;
+ }
+ ::-webkit-scrollbar-track{
+    border-width:0;
+ }
 
 // -------------------- @keyframes -------------------- //
 
