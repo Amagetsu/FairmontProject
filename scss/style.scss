@@ -440,6 +440,7 @@ body {
         color: #000000;
         transition: 0.2s;
         margin: 0px 0px 50px 0px;
+        cursor: pointer;
     }
 
     &__text button:hover {
@@ -464,12 +465,12 @@ body {
     transform: translate(-50%, -50%);
     z-index: 6969;
     overflow: hidden;
-    // display: none;
 
     & img {
         position: absolute;
         top: 15px;
         left: 535px;
+        cursor: pointer;
     }
 
     &__text h1{
@@ -510,7 +511,6 @@ body {
 }
 
 .lol {
-    // display: none;
     position: fixed;
     width: 100%;
     height: 100%;

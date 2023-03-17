@@ -75,7 +75,7 @@ function changeBG(){
 
 // Модельное меню 
 
-const modalTrigger = document.querySelectorAll('[data-modal]'),
+const modalTrigger = document.querySelector('[data-modal]'),
 	  modal = document.querySelector('.lol'),
 	  modalCloseBtn = document.querySelector('[data-close]');
 
@@ -83,13 +83,15 @@ modalTrigger.addEventListener('click', () => {
 
 	modal.classList.add('show');
 	modal.classList.remove('hide');
+	document.body.style.overflow = "hidden";
 
 });
 
-modalTrigger.addEventListener('click', () => {
+modalCloseBtn.addEventListener('click', () => {
 
 	modal.classList.add('hide');
 	modal.classList.remove('show');
+	document.body.style.overflow = "";
 
 });
 
