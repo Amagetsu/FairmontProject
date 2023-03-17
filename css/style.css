@@ -199,10 +199,14 @@ body.lock {
 .baner__text h1 {
   margin: 0px 0px 15px 0px;
   font-size: 60px;
+  animation: slideBanerH1 1s ease forwards;
+  animation-delay: 1s;
 }
 .baner__text p {
   margin: 0px 0px 30px 0px;
   font-size: 20px;
+  animation: slideBanerP 1s ease forwards;
+  animation-delay: 1s;
 }
 .baner__text a {
   text-decoration: none;
@@ -218,6 +222,8 @@ body.lock {
   border: 2px solid #E79E00;
   color: #000000;
   transition: 0.5s;
+  animation: slideBanerA 1s ease forwards;
+  animation-delay: 1s;
 }
 .baner__text a:hover {
   background: #121212;
@@ -237,6 +243,8 @@ body.lock {
   margin: 20px 0px 50px 0px;
   display: flex;
   justify-content: center;
+  animation: loadingText 1s ease forwards;
+  animation-delay: 0.1s;
 }
 .loading__blocks {
   display: flex;
@@ -281,33 +289,41 @@ body.lock {
   color: #E79E00;
 }
 
-@keyframes slideLoadBlock {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.beginningplay {
+.social-links {
   margin: 250px 0px 100px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-image: url(../img/Background.png);
+  background-image: url(../img/social/Background.png);
   background-position: center top;
   background-repeat: no-repeat;
   height: 640px;
   color: #000;
 }
-.beginningplay__text {
+.social-links__blocks {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+.social-links__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideTop 1s ease forwards;
+  animation-delay: calc(0.3s * var(--i));
+}
+.social-links__block h3 {
+  margin: 20px 0px 20px 0px;
+}
+.social-links__block img {
+  margin: 10px 0px 20px 0px;
+}
+.social-links__text {
   margin: 0px 0px 50px 0px;
 }
-.beginningplay__a a {
+.social-links a {
   text-decoration: none;
   background: #121212;
   border-radius: 25px;
@@ -322,17 +338,14 @@ body.lock {
   color: #E79E00;
   transition: 0.4s;
 }
-.beginningplay__a a:hover {
-  background: #E79E00;
-  border: 2px solid #121212;
-  color: #121212;
-}
 
 .servers {
   color: #fff;
   text-decoration: none;
   position: relative;
   transition: 0.5;
+  animation: slideServers 1s ease forwards;
+  animation-delay: 0.4s;
 }
 .servers__text {
   display: flex;
@@ -375,11 +388,18 @@ body.lock {
   bottom: 10vh;
   z-index: 6969;
 }
+.servers__copy-warning {
+  color: #000;
+  border: 2px solid #00be10;
+  padding: 10px 20px;
+  border-radius: 13px;
+  background: #00be10;
+}
 
-.model {
+.modal {
   width: 600px;
   height: 600px;
-  background-color: hwb(41 0% 9%/0.95);
+  background-color: hwb(0 100% 0%/0.87);
   border: 10px solid #000;
   border-radius: 25px;
   position: fixed;
@@ -389,23 +409,23 @@ body.lock {
   z-index: 6969;
   overflow: hidden;
 }
-.model img {
+.modal img {
   position: absolute;
   top: 15px;
   left: 535px;
   cursor: pointer;
 }
-.model__text h1 {
+.modal__text h1 {
   text-align: center;
   margin: 15px 0px 0px 0px;
 }
-.model__servers-1 {
+.modal__servers-1 {
   margin: 50px 0px 0px 0px;
   display: flex;
   align-items: baseline;
   justify-content: space-evenly;
 }
-.model__servers-1 a {
+.modal__servers-1 a {
   text-decoration: none;
   background: #121212;
   border-radius: 25px;
@@ -422,13 +442,13 @@ body.lock {
   transition: 0.2s;
   margin: 0px 0px 50px 0px;
 }
-.model__servers-1 a:hover {
+.modal__servers-1 a:hover {
   background: #E79E00;
   border: 2px solid #121212;
   color: #121212;
 }
 
-.lol {
+.modal-wrapper {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -437,4 +457,75 @@ body.lock {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+@keyframes slideBanerH1 {
+  0% {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideBanerP {
+  0% {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideBanerA {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes loadingText {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideLoadBlock {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideServers {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

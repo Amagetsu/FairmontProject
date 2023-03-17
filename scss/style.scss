@@ -244,11 +244,15 @@ body {
     &__text h1{
         margin: 0px 0px 15px 0px;
         font-size: 60px;
+        animation: slideBanerH1 1s ease forwards;
+        animation-delay: 1s;
     }
 
     &__text p {
         margin: 0px 0px 30px 0px;
         font-size: 20px;
+        animation: slideBanerP 1s ease forwards;
+        animation-delay: 1s;
     }
     
     &__text a {
@@ -265,6 +269,8 @@ body {
         border: 2px solid #E79E00;
         color: #000000;
         transition: 0.5s;
+        animation: slideBanerA 1s ease forwards;
+        animation-delay: 1s;
     }
 
     &__text a:hover {
@@ -288,6 +294,8 @@ body {
         margin: 20px 0px 50px 0px;
         display: flex;
         justify-content: center;
+        animation: loadingText 1s ease forwards;
+        animation-delay: .1s;
     }
 
     &__blocks {
@@ -340,24 +348,9 @@ body {
     }
 }
 
-@keyframes slideLoadBlock {
-    0% {
-        transform: translateY(100px);
-        opacity: 0;
-    }
+// -------------------- social-links -------------------- //
 
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    
-}
-
-
-
-// -------------------- Beginningplay -------------------- //
-
-.beginningplay {
+.social-links {
 
     margin: 250px 0px 100px 0px;
     display: flex;
@@ -365,18 +358,39 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-image: url(../img/Background.png);
+    background-image: url(../img/social/Background.png);
     background-position: center top;
     background-repeat: no-repeat;
     height: 640px;
     color: #000;
 
+        &__blocks {
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+        }
+
+        &__block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: slideTop 1s ease forwards;
+            animation-delay: calc(.3s * var(--i));
+        }
+
+        &__block h3 {
+            margin: 20px 0px 20px 0px;
+        }
+
+        &__block img {
+            margin: 10px 0px 20px 0px;
+        }
 
 		&__text {
             margin: 0px 0px 50px 0px;
 		}
 
-		&__a a{
+		& a{
             text-decoration: none;
             background: #121212;
             border-radius: 25px;
@@ -393,22 +407,20 @@ body {
             transition: 0.4s;
 		}
 
-        &__a a:hover {
-            background: #E79E00;
-            border:2px solid #121212;
-            color: #121212;
-        }
-
 }
 
 // -------------------- Servers -------------------- //
 
 .servers {
 
+
+
     color: #fff;
     text-decoration: none;
     position: relative;
     transition: .5;
+    animation: slideServers 1s ease forwards;
+    animation-delay: .4s;
 
     &__text {
         display: flex;
@@ -458,15 +470,24 @@ body {
         bottom: 10vh;
         z-index: 6969;
     }
+
+    &__copy-warning {
+        color: #000;
+        border: 2px solid #00be10;
+        padding: 10px 20px;
+        border-radius: 13px;
+        background: #00be10;
+        
+    }
 }
 
 
-// -------------------- Model -------------------- //
+// -------------------- modal -------------------- //
 
-.model {
+.modal {
     width: 600px;
     height: 600px;
-    background-color: hwb(41 0% 9% / 0.950);
+    background-color: hwb(0 100% 0% / 0.87);
     border: 10px solid #000;
     border-radius: 25px;
     position: fixed;
@@ -520,7 +541,7 @@ body {
     }
 }
 
-.lol {
+.modal-wrapper {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -529,4 +550,94 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+// -------------------- @keyframes -------------------- //
+
+@keyframes slideBanerH1 {
+    0% {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBanerP {
+    0% {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBanerA {
+    0% {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes loadingText {
+    0% {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLoadBlock {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideServers {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
 }
