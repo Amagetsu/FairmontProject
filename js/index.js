@@ -13,15 +13,12 @@ function setLoader () {
 } setLoader()
 
 function loaderStage1Close () {
-
-	console.log('adasd');
 	loader.classList.add('opa')
 	loaderStage2 = setInterval(loaderStage2Close, 1000);
 	
 }
 
 function loaderStage2Close () {
-	console.log('222222222');
 	loader.classList.add('hide')	
 	document.body.style.overflow = "";
 	clearInterval(loaderStage1)
