@@ -74,3 +74,27 @@ html {
     display: block;
   }
 }
+.container {
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+  color: #fff;
+}
+.container h1 {
+  margin: 50px 0px 0px 0px;
+  text-align: center;
+}
+
+.blocks__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.blocks__block-img {
+  width: 50%;
+}
+.blocks__block-text {
+  width: 50%;
+}
