@@ -75,7 +75,7 @@ function changeBG(){
 // Модельное меню 
 
 const modalTrigger = document.querySelector('[data-modal]'),
-	  modal = document.querySelector('.lol'),
+	  modal = document.querySelector('.modal-wrapper'),
 	  modalCloseBtn = document.querySelector('[data-close]');
 
 modalTrigger.addEventListener('click', () => {
@@ -108,7 +108,6 @@ copyBtn.addEventListener('click',() => {
 	copyWarning.classList.add('show')
 	copyWarning.classList.remove('hide')
 	timerCopyWarning = setInterval(copyWarningRemove, 2000)
-	console.log('asdasdasd');
 })
 
 function copyWarningRemove ()  {
@@ -116,3 +115,5 @@ function copyWarningRemove ()  {
 	copyWarning.classList.remove('show')
 	copyWarning.classList.add('hide')
 }
+
+// ----
