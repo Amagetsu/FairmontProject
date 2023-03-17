@@ -577,7 +577,7 @@ body {
 // -------------------- @keyframes -------------------- //
 
 .pred-loader{
-    transition: 1s;
+    transition: 5s;
 }
 
 .loader {
@@ -586,7 +586,7 @@ body {
     height: 100%;
     z-index: 6969;
     overflow: hidden;
-    transition: .8s;
+    transition: 1s;
 }
 
 .intro {

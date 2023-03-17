@@ -1,3 +1,32 @@
+// Лоадер 
+
+const loader = document.querySelector('.loader');
+
+let loaderStage1;
+let loaderStage2;	
+
+function setLoader () {
+
+	document.body.style.overflow = "hidden";
+	loaderStage1 = setInterval(loaderStage1Close, 5000);
+
+} setLoader()
+
+function loaderStage1Close () {
+	loader.classList.add('opa')
+	loaderStage2 = setInterval(loaderStage2Close, 1000);
+	
+}
+
+function loaderStage2Close () {
+	loader.classList.add('hide')	
+	document.body.style.overflow = "";
+	clearInterval(loaderStage1)
+	clearInterval(loaderStage2)
+}
+
+// ----
+
 // Бургер меню
 
 const menu = document.querySelector('.menu__body')
